@@ -31,7 +31,7 @@ export default function Contact() {
                 crumbs={[{ label: 'Home', to: '/' }, { label: 'Contact' }]}
             />
 
-            <section className="max-w-7xl mx-auto px-5 py-12 md:py-24 grid gap-12 md:gap-16 lg:grid-cols-[1fr_1.2fr]">
+            <section className="max-w-7xl mx-auto px-4 py-10 md:px-5 md:py-24 grid gap-10 md:gap-16 lg:grid-cols-[1fr_1.2fr]">
                 <div>
                     <span className="text-primary text-xs font-semibold tracking-[0.3em] uppercase">Get in touch</span>
                     <h2 className="font-display text-3xl md:text-5xl font-bold text-ink mt-4 leading-tight">
@@ -60,7 +60,7 @@ export default function Contact() {
                     </div>
                 </div>
 
-                <div className="rounded-3xl bg-white border border-gray-200 shadow-xl p-6 md:p-12">
+                <div className="rounded-2xl md:rounded-3xl bg-white border border-gray-200 shadow-xl p-5 md:p-12">
                     {sent ? (
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
@@ -80,13 +80,13 @@ export default function Contact() {
                             </button>
                         </motion.div>
                     ) : (
-                        <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
-                            <h3 className="font-display text-2xl md:text-3xl font-bold text-ink mb-6 md:mb-8">Send us a message</h3>
-                            <div className="grid gap-5 md:gap-6 sm:grid-cols-2">
+                        <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+                            <h3 className="font-display text-2xl md:text-3xl font-bold text-ink mb-5 md:mb-8">Send us a message</h3>
+                            <div className="grid gap-4 md:gap-6 sm:grid-cols-2">
                                 <Field label="Full name" name="name" placeholder="Your name" />
                                 <Field label="Email" name="email" type="email" placeholder="you@email.com" />
                             </div>
-                            <div className="grid gap-5 md:gap-6 sm:grid-cols-2">
+                            <div className="grid gap-4 md:gap-6 sm:grid-cols-2">
                                 <Field label="Phone" name="phone" placeholder="+94 ..." required={false} />
                                 <div>
                                     <label className="block text-sm font-medium text-ink/80 mb-2">Interested in</label>
@@ -109,7 +109,7 @@ export default function Contact() {
                             </div>
                             <button
                                 type="submit"
-                                className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary text-white font-semibold px-8 py-3.5 md:py-4 hover:bg-primary/90 transition-colors shadow-lg shadow-primary/30"
+                                className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary text-white font-semibold px-8 py-3.5 md:py-4 hover:bg-primary/90 transition-colors shadow-lg shadow-primary/30 mt-2"
                             >
                                 Send message <SendIcon className="h-5 w-5" />
                             </button>
