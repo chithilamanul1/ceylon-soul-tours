@@ -7,8 +7,8 @@ import { LeafIcon, HeartIcon, GlobeIcon, AwardIcon, ArrowRightIcon } from 'lucid
 import { PageHeader } from '@/components/PageHeader'
 import Image from 'next/image'
 
-const HERO = 'https://cdn.magicpatterns.com/patterns/generated-images/e8904b1c-45d2-4b30-92cb-bee225db894c.jpg'
-const STORY_IMG = 'https://cdn.magicpatterns.com/patterns/generated-images/ca02a5b6-bc17-44a4-9758-c42ec71fd9ed.jpg'
+const HERO = '/hero-2.png'
+const STORY_IMG = '/hero-4.png'
 
 const values = [
     { icon: HeartIcon, title: 'Soulful', text: 'We craft trips that move you, not just tick boxes on a list.' },

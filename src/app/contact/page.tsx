@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { MapPinIcon, PhoneIcon, MailIcon, ClockIcon, SendIcon, CheckCircleIcon } from 'lucide-react'
 import { PageHeader } from '@/components/PageHeader'
 
-const HERO = 'https://cdn.magicpatterns.com/patterns/generated-images/ca02a5b6-bc17-44a4-9758-c42ec71fd9ed.jpg'
+const HERO = '/hero-1.png'
 
 const info = [
     { icon: MapPinIcon, title: 'Visit us', lines: ['42 Galle Road', 'Colombo 03, Sri Lanka'] },

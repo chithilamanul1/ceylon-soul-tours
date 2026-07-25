@@ -1,8 +1,7 @@
 export interface Destination {
-    slug: string
     name: string
+    slug: string
     region: string
-    price: number
     image: string
     blurb: string
     tags: string[]
@@ -10,48 +9,51 @@ export interface Destination {
 
 export const destinations: Destination[] = [
     {
-        slug: 'sigiriya',
-        name: 'Sigiriya Rock Fortress',
+        name: 'Sigiriya',
+        slug: 'sigiriya-rock-fortress',
         region: 'Cultural Triangle',
-        price: 65,
-        image: 'https://cdn.magicpatterns.com/patterns/generated-images/60dec7c3-a6c5-47c8-8bb9-22cfe508a07e.jpg',
-        blurb: 'Climb the ancient sky palace and gaze over emerald jungle from a 5th-century wonder.',
-        tags: ['Heritage', 'Hiking'],
+        image: '/hero-1.png',
+        blurb: 'Climb the ancient rock fortress rising from the jungle, a masterpiece of ancient engineering and art.',
+        tags: ['History', 'Nature', 'Views'],
     },
     {
-        slug: 'ella-highlands',
-        name: 'Ella & Tea Highlands',
+        name: 'Ella',
+        slug: 'ella-hill-country',
         region: 'Hill Country',
-        price: 55,
-        image: 'https://cdn.magicpatterns.com/patterns/generated-images/d2c1bb89-c22c-482c-8698-46b9012ea473.jpg',
-        blurb: 'Ride the world’s most scenic train through mist-wrapped tea estates and waterfalls.',
-        tags: ['Nature', 'Rail Journey'],
+        image: '/hero-2.png',
+        blurb: 'A misty mountain village famous for tea plantations, waterfalls, and the iconic Nine Arch Bridge.',
+        tags: ['Mountains', 'Tea', 'Hiking'],
     },
     {
-        slug: 'mirissa-beach',
-        name: 'Mirissa & Southern Coast',
-        region: 'South Coast',
-        price: 48,
-        image: 'https://cdn.magicpatterns.com/patterns/generated-images/ca02a5b6-bc17-44a4-9758-c42ec71fd9ed.jpg',
-        blurb: 'Golden bays, whale watching and palm-fringed sunsets along the Indian Ocean.',
-        tags: ['Beach', 'Whale Watching'],
-    },
-    {
+        name: 'Yala National Park',
         slug: 'yala-safari',
-        name: 'Yala Wildlife Safari',
-        region: 'Southeast',
-        price: 72,
-        image: 'https://cdn.magicpatterns.com/patterns/generated-images/2c4fb8e5-74c8-44ec-b346-d516c0b64af9.jpg',
-        blurb: 'Track leopards, wild elephants and peacocks across Sri Lanka’s iconic national park.',
-        tags: ['Wildlife', 'Safari'],
+        region: 'South Coast',
+        image: '/hero-4.png',
+        blurb: 'Experience thrilling wildlife safaris with the highest density of leopards in the world.',
+        tags: ['Wildlife', 'Safari', 'Nature'],
     },
     {
-        slug: 'kandy-temple',
-        name: 'Kandy Sacred City',
+        name: 'Galle Fort',
+        slug: 'galle-dutch-fort',
+        region: 'South Coast',
+        image: '/hero-3.png',
+        blurb: 'Wander through cobbled streets of this UNESCO World Heritage site, blending European architecture and South Asian traditions.',
+        tags: ['Heritage', 'Coastal', 'Architecture'],
+    },
+    {
+        name: 'Mirissa',
+        slug: 'mirissa-beach',
+        region: 'South Coast',
+        image: '/hero-1.png',
+        blurb: 'Relax on golden sands, surf the waves, and embark on unforgettable whale watching expeditions.',
+        tags: ['Beach', 'Whales', 'Relaxation'],
+    },
+    {
+        name: 'Kandy',
+        slug: 'kandy-temple-of-tooth',
         region: 'Central Province',
-        price: 50,
-        image: 'https://cdn.magicpatterns.com/patterns/generated-images/e8904b1c-45d2-4b30-92cb-bee225db894c.jpg',
-        blurb: 'Discover the Temple of the Sacred Tooth Relic and the soul of Sinhalese culture.',
-        tags: ['Culture', 'Temple'],
+        image: '/hero-2.png',
+        blurb: 'Discover the cultural capital of Sri Lanka, home to the sacred Temple of the Tooth and traditional Sinhalese culture.',
+        tags: ['Culture', 'Heritage', 'Temple'],
     },
 ]

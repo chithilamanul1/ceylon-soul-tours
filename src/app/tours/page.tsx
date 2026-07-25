@@ -7,7 +7,7 @@ import { CheckIcon, ClockIcon, MapIcon, ArrowRightIcon } from 'lucide-react'
 import { PageHeader } from '@/components/PageHeader'
 import Image from 'next/image'
 
-const HERO = 'https://cdn.magicpatterns.com/patterns/generated-images/2c4fb8e5-74c8-44ec-b346-d516c0b64af9.jpg'
+const HERO = '/hero-3.png'
 
 interface Tour {
     name: string
@@ -24,7 +24,7 @@ const tours: Tour[] = [
         name: 'Cultural Triangle Explorer',
         days: 6,
         price: 690,
-        image: 'https://cdn.magicpatterns.com/patterns/generated-images/e8904b1c-45d2-4b30-92cb-bee225db894c.jpg',
+        image: '/hero-1.png',
         places: 'Kandy · Sigiriya · Dambulla · Polonnaruwa',
         highlights: ['Sigiriya Rock climb', 'Cave temples of Dambulla', 'Sacred Tooth Temple', 'Village cooking class'],
         featured: true,
@@ -33,7 +33,7 @@ const tours: Tour[] = [
         name: 'Hill Country Rail Journey',
         days: 5,
         price: 580,
-        image: 'https://cdn.magicpatterns.com/patterns/generated-images/d2c1bb89-c22c-482c-8698-46b9012ea473.jpg',
+        image: '/hero-2.png',
         places: 'Nuwara Eliya · Ella · Nine Arch Bridge',
         highlights: ['Scenic mountain train', 'Tea estate tour', 'Little Adam’s Peak hike', 'Waterfall picnic'],
     },
@@ -41,7 +41,7 @@ const tours: Tour[] = [
         name: 'Wild South Safari & Beach',
         days: 7,
         price: 820,
-        image: 'https://cdn.magicpatterns.com/patterns/generated-images/2c4fb8e5-74c8-44ec-b346-d516c0b64af9.jpg',
+        image: '/hero-4.png',
         places: 'Yala · Mirissa · Galle Fort',
         highlights: ['Leopard safari in Yala', 'Whale watching cruise', 'Galle Fort at sunset', 'Beach relaxation'],
     },
@@ -49,7 +49,7 @@ const tours: Tour[] = [
         name: 'Grand Sri Lanka Odyssey',
         days: 12,
         price: 1490,
-        image: 'https://cdn.magicpatterns.com/patterns/generated-images/ca02a5b6-bc17-44a4-9758-c42ec71fd9ed.jpg',
+        image: '/hero-3.png',
         places: 'Colombo to the coast — the complete island',
         highlights: ['All cultural highlights', 'Hill country & tea', 'Two wildlife safaris', 'Southern beaches & Ayurveda'],
     },

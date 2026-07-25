@@ -5,7 +5,7 @@ import { PageHeader } from '@/components/PageHeader'
 import { DestinationCard } from '@/components/DestinationCard'
 import { destinations } from '@/data/destinations'
 
-const HERO = 'https://cdn.magicpatterns.com/patterns/generated-images/60dec7c3-a6c5-47c8-8bb9-22cfe508a07e.jpg'
+const HERO = '/hero-1.png'
 
 const regions = ['All', ...Array.from(new Set(destinations.map((d) => d.region)))]
 
