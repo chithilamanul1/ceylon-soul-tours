@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MapPinIcon, PhoneIcon, MailIcon } from 'lucide-react'
 
 const FacebookIcon = ({ className }: { className?: string }) => (
     <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -15,102 +14,95 @@ const InstagramIcon = ({ className }: { className?: string }) => (
     </svg>
 )
 
-const TiktokIcon = ({ className }: { className?: string }) => (
+const TikTokIcon = ({ className }: { className?: string }) => (
     <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.26-1.17 4.51-2.94 5.92-1.75 1.4-4.16 1.95-6.38 1.52-2.25-.42-4.24-1.78-5.4-3.65-1.17-1.88-1.43-4.29-.75-6.38.68-2.1 2.27-3.88 4.29-4.83 2.02-.95 4.39-1.13 6.52-.51V13.1c-1.06-.39-2.22-.44-3.32-.17-1.1.27-2.11.91-2.79 1.79-.68.88-1.01 2.03-.92 3.14.09 1.11.6 2.16 1.42 2.93.82.77 1.91 1.22 3.04 1.25 1.13.03 2.24-.37 3.09-1.11.85-.74 1.39-1.78 1.52-2.91.03-.28.04-.56.04-.84V.02h3.58z" />
+        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.12-3.44-3.17-3.8-5.46-.4-2.51.33-5.11 1.9-7.02 1.28-1.56 3.16-2.57 5.14-2.88 1.05-.15 2.12-.11 3.16.14v4.14c-1.83-.31-3.8.12-5.11 1.4-1.04 1.02-1.45 2.5-1.12 3.92.34 1.46 1.51 2.66 2.94 3.08 1.6.48 3.39.05 4.62-1.07 1.05-.96 1.61-2.35 1.63-3.76.04-5.32.01-10.64.02-15.96h3.63z" />
     </svg>
 )
 
-const socialLinks = [
-    { Icon: FacebookIcon, href: 'https://web.facebook.com/profile.php?id=61586557000730' },
-    { Icon: InstagramIcon, href: 'https://www.instagram.com/ceylonsoultravels' },
-    { Icon: TiktokIcon, href: 'https://www.tiktok.com/@travelsceylonsoul' },
-]
-
 export function Footer() {
     return (
-        <footer className="bg-white text-ink border-t border-gray-100">
-            <div className="max-w-7xl mx-auto px-5 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-                <div>
-                    <div className="flex items-center gap-3 mb-5">
-                        <Image src="/logo.png" alt="Ceylon Soul Travels" width={56} height={56} className="h-14 w-14 object-contain" />
-                        <div className="leading-none">
-                            <div className="font-display text-xl text-ink">Ceylon Soul</div>
-                            <div className="text-[10px] tracking-[0.35em] text-primary uppercase">Travels</div>
+        <footer className="bg-ink text-white pt-20 md:pt-24 pb-10 border-t border-gray-800">
+            <div className="max-w-7xl mx-auto px-5">
+                <div className="grid gap-12 md:gap-16 lg:grid-cols-4">
+                    <div className="lg:col-span-1">
+                        <Link href="/" className="flex items-center gap-3 mb-6">
+                            <div className="bg-white p-1.5 rounded-full">
+                                <Image src="/logo.png" alt="Ceylon Soul Travels" width={40} height={40} className="h-10 w-10 object-contain" />
+                            </div>
+                            <div className="leading-none">
+                                <div className="font-display text-xl text-white">Ceylon Soul</div>
+                                <div className="text-[10px] tracking-[0.35em] text-primary uppercase">Travels</div>
+                            </div>
+                        </Link>
+                        <p className="text-white/60 text-sm leading-relaxed mb-8">
+                            Crafting bespoke journeys across Sri Lanka. We believe in travel that touches the soul, protects the wild, and supports local communities.
+                        </p>
+                        <div className="flex items-center gap-4">
+                            <a href="https://web.facebook.com/profile.php?id=61586557000730" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-primary hover:text-white transition-colors">
+                                <FacebookIcon className="h-5 w-5" />
+                            </a>
+                            <a href="https://www.instagram.com/ceylonsoultravels" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-primary hover:text-white transition-colors">
+                                <InstagramIcon className="h-5 w-5" />
+                            </a>
+                            <a href="https://www.tiktok.com/@travelsceylonsoul" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-primary hover:text-white transition-colors">
+                                <TikTokIcon className="h-4 w-4" />
+                            </a>
                         </div>
                     </div>
-                    <p className="text-sm leading-relaxed text-ink/70">
-                        Journeys crafted with soul across the wonders of Sri Lanka — from misty highlands to golden shores.
-                    </p>
-                    <div className="flex gap-3 mt-6">
-                        {socialLinks.map(({ Icon, href }, i) => (
-                            <a
-                                key={i}
-                                href={href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="h-9 w-9 grid place-items-center rounded-full border border-gray-200 text-ink/60 hover:border-primary hover:text-primary transition-colors"
-                                aria-label="Social link"
-                            >
-                                <Icon className="h-4 w-4" />
-                            </a>
-                        ))}
+
+                    <div>
+                        <h4 className="font-semibold text-white mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
+                        <ul className="space-y-4">
+                            <li><Link href="/" className="text-white/60 hover:text-primary transition-colors text-sm">Home</Link></li>
+                            <li><Link href="/destinations" className="text-white/60 hover:text-primary transition-colors text-sm">Destinations</Link></li>
+                            <li><Link href="/tours" className="text-white/60 hover:text-primary transition-colors text-sm">Tour Packages</Link></li>
+                            <li><Link href="/about" className="text-white/60 hover:text-primary transition-colors text-sm">About Us</Link></li>
+                            <li><Link href="/contact" className="text-white/60 hover:text-primary transition-colors text-sm">Contact</Link></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="font-semibold text-white mb-6 uppercase tracking-wider text-sm">Popular Tours</h4>
+                        <ul className="space-y-4">
+                            <li><Link href="/tours" className="text-white/60 hover:text-primary transition-colors text-sm">Cultural Triangle Explorer</Link></li>
+                            <li><Link href="/tours" className="text-white/60 hover:text-primary transition-colors text-sm">Hill Country Rail Journey</Link></li>
+                            <li><Link href="/tours" className="text-white/60 hover:text-primary transition-colors text-sm">Wild South Safari & Beach</Link></li>
+                            <li><Link href="/tours" className="text-white/60 hover:text-primary transition-colors text-sm">Grand Sri Lanka Odyssey</Link></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="font-semibold text-white mb-6 uppercase tracking-wider text-sm">Contact Us</h4>
+                        <ul className="space-y-4">
+                            <li className="text-white/60 text-sm flex items-start gap-3">
+                                <span className="mt-0.5 text-primary">📍</span>
+                                <span>42 Galle Road<br />Colombo 03, Sri Lanka</span>
+                            </li>
+                            <li className="text-white/60 text-sm flex items-center gap-3">
+                                <span className="text-primary">📞</span>
+                                <a href="tel:+94765996958" className="hover:text-primary transition-colors">+94 76 599 6958</a>
+                            </li>
+                            <li className="text-white/60 text-sm flex items-center gap-3">
+                                <span className="text-primary">📞</span>
+                                <a href="tel:+94741310832" className="hover:text-primary transition-colors">+94 74 131 0832</a>
+                            </li>
+                            <li className="text-white/60 text-sm flex items-center gap-3">
+                                <span className="text-primary">✉️</span>
+                                <a href="mailto:info@ceylonsoultravels.lk" className="hover:text-primary transition-colors">info@ceylonsoultravels.lk</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <div>
-                    <h4 className="text-ink font-semibold mb-5 text-sm tracking-wide uppercase">Explore The Site</h4>
-                    <ul className="space-y-3 text-sm text-ink/70">
-                        {[
-                            { to: '/', label: 'Home' },
-                            { to: '/destinations', label: 'Destinations' },
-                            { to: '/tours', label: 'Tailor Made Tours' },
-                            { to: '/about', label: 'Our Story' },
-                            { to: '/contact', label: 'Contact Us' },
-                        ].map((l) => (
-                            <li key={l.to}>
-                                <Link href={l.to} className="hover:text-primary transition-colors">
-                                    {l.label}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 className="text-ink font-semibold mb-5 text-sm tracking-wide uppercase">Day Tours</h4>
-                    <ul className="space-y-3 text-sm text-ink/70">
-                        {['Day Tour of Colombo', 'Galle Day Tour', 'Kandy Day Tour', 'Sigiriya & Dambulla Day Tour', 'Whale Watching Day Tour'].map(
-                            (t) => (
-                                <li key={t}>
-                                    <Link href="/tours" className="hover:text-primary transition-colors">
-                                        {t}
-                                    </Link>
-                                </li>
-                            ),
-                        )}
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 className="text-ink font-semibold mb-5 text-sm tracking-wide uppercase">Itineraries</h4>
-                    <ul className="space-y-3 text-sm text-ink/70">
-                        {['Adventure & Nature Tours', 'Culture & Heritage Tours', 'Family Tours', 'Luxury Bespoke Tours', 'Wildlife Tours'].map(
-                            (t) => (
-                                <li key={t}>
-                                    <Link href="/tours" className="hover:text-primary transition-colors">
-                                        {t}
-                                    </Link>
-                                </li>
-                            ),
-                        )}
-                    </ul>
-                </div>
-            </div>
-            <div className="border-t border-gray-100">
-                <div className="max-w-7xl mx-auto px-5 py-6 text-xs flex flex-col sm:flex-row items-center justify-between gap-3 text-ink/60">
-                    <p>© {new Date().getFullYear()} Ceylon Soul Travels. All rights reserved.</p>
-                    <p>Crafted with soul in Sri Lanka 🐘</p>
+                <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+                    <p className="text-white/40 text-xs">
+                        © {new Date().getFullYear()} Ceylon Soul Travels. All rights reserved.
+                    </p>
+                    <div className="flex items-center gap-6 text-xs text-white/40">
+                        <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+                    </div>
                 </div>
             </div>
         </footer>

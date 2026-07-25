@@ -2,120 +2,102 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MenuIcon, XIcon, PhoneIcon } from 'lucide-react'
-import Image from 'next/image'
 
 const links = [
-    { to: '/', label: 'Home' },
-    { to: '/destinations', label: 'Destinations' },
-    { to: '/tours', label: 'Tours' },
-    { to: '/about', label: 'About Us' },
-    { to: '/contact', label: 'Contact' },
+    { label: 'Home', href: '/' },
+    { label: 'Destinations', href: '/destinations' },
+    { label: 'Tours', href: '/tours' },
+    { label: 'About Us', href: '/about' },
 ]
 
 export function Navbar() {
-    const [open, setOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
-    const pathname = usePathname()
-
-    useEffect(() => setOpen(false), [pathname])
 
     useEffect(() => {
-        const onScroll = () => setScrolled(window.scrollY > 20)
-        onScroll()
-        window.addEventListener('scroll', onScroll)
-        return () => window.removeEventListener('scroll', onScroll)
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 20)
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
     }, [])
-
-    const isHome = pathname === '/'
-    const solid = scrolled || !isHome
 
     return (
         <header
-            className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${solid ? 'bg-white/95 backdrop-blur border-b border-gray-200 py-3 shadow-sm' : 'bg-transparent py-5'
+            className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-white py-5'
                 }`}
         >
-            <nav className="max-w-7xl mx-auto px-5 flex items-center justify-between">
-                <Link href="/" className="flex items-center gap-3" aria-label="Ceylon Soul Travels home">
-                    <Image src="/logo.png" alt="Ceylon Soul Travels" width={48} height={48} className="h-12 w-12 object-contain" />
-                    <span className="hidden sm:flex flex-col leading-none">
-                        <span className={`font-display text-lg ${solid ? 'text-ink' : 'text-white'}`}>Ceylon Soul</span>
-                        <span className={`text-[10px] tracking-[0.35em] uppercase ${solid ? 'text-primary' : 'text-primary'}`}>Travels</span>
-                    </span>
+            <div className="max-w-7xl mx-auto px-5 flex items-center justify-between">
+                <Link href="/" className="flex items-center gap-2 md:gap-3 z-50 relative">
+                    <Image src="/logo.png" alt="Ceylon Soul Travels" width={48} height={48} className="h-10 w-10 md:h-12 md:w-12 object-contain" />
+                    <div className="leading-none">
+                        <div className="font-display text-lg md:text-xl text-ink">Ceylon Soul</div>
+                        <div className="text-[8px] md:text-[10px] tracking-[0.35em] text-primary uppercase">Travels</div>
+                    </div>
                 </Link>
 
-                <ul className="hidden lg:flex items-center gap-1">
-                    {links.map((l) => {
-                        const isActive = pathname === l.to
-                        return (
-                            <li key={l.to}>
-                                <Link
-                                    href={l.to}
-                                    className={`relative px-4 py-2 text-sm font-medium transition-colors ${isActive ? 'text-primary' : (solid ? 'text-ink/80 hover:text-ink' : 'text-white/80 hover:text-white')
-                                        }`}
-                                >
+                {/* Desktop Nav */}
+                <nav className="hidden md:flex items-center gap-8">
+                    <ul className="flex items-center gap-8">
+                        {links.map((l) => (
+                            <li key={l.label}>
+                                <Link href={l.href} className="text-sm font-medium text-ink/80 hover:text-primary transition-colors">
                                     {l.label}
-                                    {isActive && (
-                                        <motion.span
-                                            layoutId="nav-underline"
-                                            className="absolute left-4 right-4 -bottom-0.5 h-0.5 bg-primary rounded-full"
-                                        />
-                                    )}
                                 </Link>
                             </li>
-                        )
-                    })}
-                </ul>
-
-                <div className="flex items-center gap-3">
+                        ))}
+                    </ul>
+                    <div className="h-6 w-px bg-gray-200" />
                     <Link
                         href="/contact"
-                        className="hidden md:inline-flex items-center gap-2 rounded-full bg-primary hover:bg-primary/90 text-white font-semibold text-sm px-5 py-2.5 transition-colors"
+                        className="inline-flex items-center gap-2 rounded-full bg-primary text-white font-semibold text-sm px-6 py-2.5 hover:bg-primary/90 transition-colors"
                     >
-                        <PhoneIcon className="h-4 w-4" />
-                        Plan My Trip
+                        <PhoneIcon className="h-4 w-4" /> Plan My Trip
                     </Link>
-                    <button
-                        className={`lg:hidden p-1 ${solid ? 'text-ink' : 'text-white'}`}
-                        onClick={() => setOpen((o) => !o)}
-                        aria-label={open ? 'Close menu' : 'Open menu'}
-                    >
-                        {open ? <XIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
-                    </button>
-                </div>
-            </nav>
+                </nav>
 
+                {/* Mobile Toggle */}
+                <button
+                    className="md:hidden relative z-50 p-2 -mr-2 text-ink"
+                    onClick={() => setIsOpen(!isOpen)}
+                    aria-label="Toggle menu"
+                >
+                    {isOpen ? <XIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
+                </button>
+            </div>
+
+            {/* Mobile Nav */}
             <AnimatePresence>
-                {open && (
+                {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="lg:hidden overflow-hidden bg-white border-t border-gray-200"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl md:hidden"
                     >
-                        <ul className="px-5 py-4 space-y-1">
-                            {links.map((l) => {
-                                const isActive = pathname === l.to
-                                return (
-                                    <li key={l.to}>
-                                        <Link
-                                            href={l.to}
-                                            className={`block rounded-lg px-4 py-3 text-base font-medium ${isActive ? 'bg-primary/10 text-primary' : 'text-ink/80'
-                                                }`}
-                                        >
-                                            {l.label}
-                                        </Link>
-                                    </li>
-                                )
-                            })}
-                            <li>
+                        <ul className="flex flex-col px-5 py-6 gap-4">
+                            {links.map((l) => (
+                                <li key={l.label}>
+                                    <Link
+                                        href={l.href}
+                                        onClick={() => setIsOpen(false)}
+                                        className="block text-lg font-medium text-ink hover:text-primary transition-colors"
+                                    >
+                                        {l.label}
+                                    </Link>
+                                </li>
+                            ))}
+                            <li className="pt-4 mt-2 border-t border-gray-100">
                                 <Link
                                     href="/contact"
-                                    className="mt-2 flex items-center justify-center gap-2 rounded-full bg-primary text-white font-semibold px-5 py-3"
+                                    onClick={() => setIsOpen(false)}
+                                    className="inline-flex items-center justify-center w-full gap-2 rounded-full bg-primary text-white font-semibold px-6 py-3.5 hover:bg-primary/90 transition-colors"
                                 >
-                                    <PhoneIcon className="h-4 w-4" /> Plan My Trip
+                                    <PhoneIcon className="h-5 w-5" /> Plan My Trip
                                 </Link>
                             </li>
                         </ul>

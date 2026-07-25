@@ -43,10 +43,10 @@ export function DestinationCard({ d, index }: { d: Destination; index: number })
                 </div>
                 <div className="mt-6 pt-5 border-t border-gray-50">
                     <Link
-                        href={`/destinations`}
+                        href="/contact"
                         className="inline-flex items-center gap-2 text-sm font-semibold text-primary uppercase tracking-widest hover:text-primary/80 transition-colors"
                     >
-                        Explore <ArrowRightIcon className="h-4 w-4" />
+                        Inquire now <ArrowRightIcon className="h-4 w-4" />
                     </Link>
                 </div>
             </div>
