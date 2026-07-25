@@ -22,7 +22,7 @@ const tours: Tour[] = [
     {
         name: 'Cultural Triangle Explorer',
         days: 6,
-        image: '/sigiriya.png',
+        image: '/sigiriya-new.png',
         places: 'Kandy · Sigiriya · Dambulla · Polonnaruwa',
         highlights: ['Sigiriya Rock climb', 'Cave temples of Dambulla', 'Sacred Tooth Temple', 'Village cooking class'],
         featured: true,
@@ -30,7 +30,7 @@ const tours: Tour[] = [
     {
         name: 'Hill Country Rail Journey',
         days: 5,
-        image: '/ella.png',
+        image: '/ella-new.png',
         places: 'Nuwara Eliya · Ella · Nine Arch Bridge',
         highlights: ['Scenic mountain train', 'Tea estate tour', 'Little Adam’s Peak hike', 'Waterfall picnic'],
     },
@@ -44,7 +44,7 @@ const tours: Tour[] = [
     {
         name: 'Grand Sri Lanka Odyssey',
         days: 12,
-        image: '/galle.png',
+        image: '/galle-new.png',
         places: 'Colombo to the coast — the complete island',
         highlights: ['All cultural highlights', 'Hill country & tea', 'Two wildlife safaris', 'Southern beaches & Ayurveda'],
     },
@@ -54,17 +54,17 @@ export default function Tours() {
     return (
         <div className="w-full bg-white">
             <PageHeader
-                eyebrow="Curated experiences"
-                title="Tour Packages"
+                eyebrow="Special Trips"
+                title="Our Best Tours"
                 image={HERO}
                 crumbs={[{ label: 'Home', to: '/' }, { label: 'Tours' }]}
             />
 
             <section className="max-w-7xl mx-auto px-5 py-12 md:py-24">
                 <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
-                    <h2 className="font-display text-3xl md:text-4xl font-bold text-ink mb-3 md:mb-4">Our Best Tour Packages</h2>
+                    <h2 className="font-display text-3xl md:text-4xl font-bold text-ink mb-3 md:mb-4">Our Best Tours</h2>
                     <p className="text-ink/70 text-base md:text-lg leading-relaxed">
-                        Carefully planned trips to show you the best of Sri Lanka. Or, let us build a special trip just for your dreams.
+                        Great trips to see the best of Sri Lanka. We can also plan a custom trip just for you.
                     </p>
                 </div>
 
@@ -116,9 +116,9 @@ export default function Tours() {
                 </div>
 
                 <div className="mt-16 md:mt-24 rounded-3xl bg-gray-50 border border-gray-100 p-8 md:p-16 text-center">
-                    <h2 className="font-display text-3xl md:text-4xl font-bold text-ink">Don't see your perfect trip?</h2>
+                    <h2 className="font-display text-3xl md:text-4xl font-bold text-ink">Want a custom trip?</h2>
                     <p className="mt-3 md:mt-4 text-ink/70 text-base md:text-lg max-w-2xl mx-auto">
-                        Every traveller is different. Tell us what you want to see and do, and we will design a special trip just for you.
+                        Tell us what you like, and we will plan a trip exactly how you want it.
                     </p>
                     <Link
                         href="/contact"
