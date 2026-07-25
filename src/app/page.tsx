@@ -6,10 +6,10 @@ import { motion } from 'framer-motion'
 import { ArrowRightIcon } from 'lucide-react'
 import Image from 'next/image'
 
-const SIGIRIYA = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Beauty_of_Sigiriya_by_Bimalka_Workz.jpg/800px-Beauty_of_Sigiriya_by_Bimalka_Workz.jpg'
+const SIGIRIYA = '/sigiriya-new.png'
 const NINE_ARCH = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Nine_Arch_Bridge%2C_Ella.jpg/800px-Nine_Arch_Bridge%2C_Ella.jpg'
-const YALA = 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sri_Lankan_Leopard_in_Yala_National_Park.jpg/800px-Sri_Lankan_Leopard_in_Yala_National_Park.jpg'
-const MIRISSA = 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Mirissa_Beach%2C_Sri_Lanka.jpg/800px-Mirissa_Beach%2C_Sri_Lanka.jpg'
+const YALA = '/yala.png'
+const MIRISSA = '/mirissa.png'
 
 export default function Home() {
   return (

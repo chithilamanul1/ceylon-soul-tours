@@ -22,7 +22,7 @@ const tours: Tour[] = [
     {
         name: 'Cultural Triangle Explorer',
         days: 6,
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Beauty_of_Sigiriya_by_Bimalka_Workz.jpg/800px-Beauty_of_Sigiriya_by_Bimalka_Workz.jpg',
+        image: '/sigiriya-new.png',
         places: 'Kandy · Sigiriya · Dambulla · Polonnaruwa',
         highlights: ['Sigiriya Rock climb', 'Cave temples of Dambulla', 'Sacred Tooth Temple', 'Village cooking class'],
         featured: true,
@@ -37,7 +37,7 @@ const tours: Tour[] = [
     {
         name: 'Wild South Safari & Beach',
         days: 7,
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sri_Lankan_Leopard_in_Yala_National_Park.jpg/800px-Sri_Lankan_Leopard_in_Yala_National_Park.jpg',
+        image: '/yala.png',
         places: 'Yala · Mirissa · Galle Fort',
         highlights: ['Leopard safari in Yala', 'Whale watching cruise', 'Galle Fort at sunset', 'Beach relaxation'],
     },
