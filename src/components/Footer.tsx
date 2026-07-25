@@ -100,8 +100,8 @@ export function Footer() {
                         <p className="text-white/40 text-xs">
                             © {new Date().getFullYear()} Ceylon Soul Travels. All rights reserved.
                         </p>
-                        <p className="text-white/30 text-[10px]">
-                            Made with love by <a href="https://seranex.lk" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Seranex.lk</a> & Chithila Manul. Maintenance by Seranex.
+                        <p className="text-white/50 text-xs">
+                            Made with love by <a href="https://seranex.lk" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-white transition-colors font-medium">Seranex.lk</a> & <span className="text-primary font-medium">Chithila Manul</span>. Maintenance by <a href="https://seranex.lk" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-white transition-colors font-medium">Seranex</a>.
                         </p>
                     </div>
                     <div className="flex items-center gap-6 text-xs text-white/40">
