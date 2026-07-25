@@ -90,7 +90,7 @@ export default function Home() {
             className="md:col-span-7 relative h-[60vh] md:h-[80vh] w-full rounded-2xl overflow-hidden"
           >
             <Image
-              src="/hero-1.png"
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Nine_Arch_Bridge,_Ella.jpg?width=800"
               alt="Sri Lankan Coast"
               fill
               className="object-cover hover:scale-105 transition-transform duration-1000"
@@ -122,7 +122,7 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 className="md:col-span-7 relative h-[50vh] md:h-[70vh] w-full rounded-2xl overflow-hidden"
               >
-                <Image src="/yala.png" alt="Wildlife" fill className="object-cover" />
+                <Image src="https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Lankan_Leopard_in_Yala_National_Park.jpg?width=800" alt="Wildlife" fill className="object-cover" />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
@@ -167,7 +167,7 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 className="md:col-span-7 relative h-[50vh] md:h-[70vh] w-full rounded-2xl overflow-hidden order-1 md:order-2"
               >
-                <Image src="/sigiriya-new.png" alt="Heritage" fill className="object-cover" />
+                <Image src="https://commons.wikimedia.org/wiki/Special:FilePath/Beauty_of_Sigiriya_by_Bimalka_Workz.jpg?width=800" alt="Heritage" fill className="object-cover" />
               </motion.div>
             </div>
 
@@ -180,7 +180,7 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 className="md:col-span-7 relative h-[50vh] md:h-[70vh] w-full rounded-2xl overflow-hidden"
               >
-                <Image src="/mirissa-new.png" alt="Coast" fill className="object-cover" />
+                <Image src="https://commons.wikimedia.org/wiki/Special:FilePath/Coconut_Tree_Hill_Mirissa.jpg?width=800" alt="Coast" fill className="object-cover" />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
