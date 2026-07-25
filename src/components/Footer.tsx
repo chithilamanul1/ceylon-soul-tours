@@ -15,11 +15,17 @@ const InstagramIcon = ({ className }: { className?: string }) => (
     </svg>
 )
 
-const TwitterIcon = ({ className }: { className?: string }) => (
+const TiktokIcon = ({ className }: { className?: string }) => (
     <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.26-1.17 4.51-2.94 5.92-1.75 1.4-4.16 1.95-6.38 1.52-2.25-.42-4.24-1.78-5.4-3.65-1.17-1.88-1.43-4.29-.75-6.38.68-2.1 2.27-3.88 4.29-4.83 2.02-.95 4.39-1.13 6.52-.51V13.1c-1.06-.39-2.22-.44-3.32-.17-1.1.27-2.11.91-2.79 1.79-.68.88-1.01 2.03-.92 3.14.09 1.11.6 2.16 1.42 2.93.82.77 1.91 1.22 3.04 1.25 1.13.03 2.24-.37 3.09-1.11.85-.74 1.39-1.78 1.52-2.91.03-.28.04-.56.04-.84V.02h3.58z" />
     </svg>
 )
+
+const socialLinks = [
+    { Icon: FacebookIcon, href: 'https://web.facebook.com/profile.php?id=61586557000730' },
+    { Icon: InstagramIcon, href: 'https://www.instagram.com/ceylonsoultravels' },
+    { Icon: TiktokIcon, href: 'https://www.tiktok.com/@travelsceylonsoul' },
+]
 
 export function Footer() {
     return (
@@ -37,10 +43,12 @@ export function Footer() {
                         Journeys crafted with soul across the wonders of Sri Lanka — from misty highlands to golden shores.
                     </p>
                     <div className="flex gap-3 mt-6">
-                        {[FacebookIcon, InstagramIcon, TwitterIcon].map((Icon, i) => (
+                        {socialLinks.map(({ Icon, href }, i) => (
                             <a
                                 key={i}
-                                href="#"
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="h-9 w-9 grid place-items-center rounded-full border border-gray-200 text-ink/60 hover:border-primary hover:text-primary transition-colors"
                                 aria-label="Social link"
                             >

@@ -1,13 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --gold: #c8992f;
-  --gold-light: #e0b84a;
-  --ink: #16130d;
-  --primary: #ff4757;
-  /* Red/pink accent color from screenshots */
+@theme {
+  --color-primary: #ff4757;
+  --color-ink: #16130d;
+  --color-gold: #c8992f;
+  --color-gold-light: #e0b84a;
+
+  --font-sans: var(--font-montserrat), sans-serif;
+  --font-display: var(--font-cormorant), Georgia, serif;
 }
 
 html {
@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  color: var(--ink);
+  color: var(--color-ink);
   background-color: #ffffff;
 }
 
@@ -24,7 +24,7 @@ h2,
 h3,
 h4,
 .font-display {
-  font-family: var(--font-cormorant), Georgia, serif;
+  font-family: var(--font-display);
   font-weight: 700;
   letter-spacing: -0.015em;
   line-height: 1.05;
