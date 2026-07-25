@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Montserrat } from 'next/font/google'
+import { Cormorant_Garamond, Montserrat, Great_Vibes } from 'next/font/google'
 import './globals.css'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
@@ -15,6 +15,12 @@ const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-montserrat',
+})
+
+const greatVibes = Great_Vibes({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-vine',
 })
 
 export const metadata: Metadata = {
@@ -43,9 +49,9 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Ceylon Soul Travels',
-  image: 'https://ceylonsoultravels.com/logo.png',
-  '@id': 'https://ceylonsoultravels.com',
-  url: 'https://ceylonsoultravels.com',
+  image: 'https://ceylonsoultravels.lk/logo.png',
+  '@id': 'https://ceylonsoultravels.lk',
+  url: 'https://ceylonsoultravels.lk',
   telephone: '+94771234567',
   address: {
     '@type': 'PostalAddress',
@@ -81,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${montserrat.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${montserrat.variable} ${greatVibes.variable}`}>
       <head>
         <script
           type="application/ld+json"

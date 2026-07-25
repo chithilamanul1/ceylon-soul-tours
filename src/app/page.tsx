@@ -68,7 +68,7 @@ export default function Home() {
           >
             <h2 className="font-display text-4xl md:text-6xl font-medium leading-[1.1] mb-8">
               We don't design tours.<br />
-              <span className="italic text-ink/60">We create space for culture to be shared with care.</span>
+              <span className="font-vine text-ink/70 text-5xl md:text-7xl block mt-4">We create space for culture to be shared with care.</span>
             </h2>
             <p className="text-ink/70 text-base md:text-lg leading-relaxed mb-6">
               At Ceylon Soul Travels, we want to give you the best holiday ever. We care about protecting our beautiful island and helping local people while showing you the very best of Sri Lanka.

@@ -18,9 +18,7 @@ const values = [
 ]
 
 const team = [
-    { name: 'Nuwan Perera', role: 'Founder & Lead Guide' },
-    { name: 'Ishara Fernando', role: 'Travel Designer' },
-    { name: 'Kavindu Silva', role: 'Wildlife Specialist' },
+    { name: '', role: '' },
 ]
 
 export default function About() {

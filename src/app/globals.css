@@ -8,6 +8,7 @@
 
   --font-sans: var(--font-montserrat), sans-serif;
   --font-display: var(--font-cormorant), Georgia, serif;
+  --font-vine: var(--font-vine), cursive;
 }
 
 html {
