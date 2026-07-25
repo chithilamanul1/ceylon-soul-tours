@@ -88,9 +88,10 @@ export default function Home() {
             loop
             muted
             playsInline
+            poster="/hero-2.png"
             className="absolute inset-0 w-full h-full object-cover object-center"
           >
-            <source src={HERO_VIDEO} type="video/mp4" />
+            <source src="/hero-video.mp4" type="video/mp4" />
           </video>
         </div>
 
