@@ -30,7 +30,7 @@ const tours: Tour[] = [
     {
         name: 'Hill Country Rail Journey',
         days: 5,
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Nine_Arch_Bridge%2C_Ella.jpg/800px-Nine_Arch_Bridge%2C_Ella.jpg',
+        image: '/ella-new.png',
         places: 'Nuwara Eliya · Ella · Nine Arch Bridge',
         highlights: ['Scenic mountain train', 'Tea estate tour', 'Little Adam\u2019s Peak hike', 'Waterfall picnic'],
     },
@@ -44,7 +44,7 @@ const tours: Tour[] = [
     {
         name: 'Grand Sri Lanka Odyssey',
         days: 12,
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Galle_Fort_Lighthouse_Sri_Lanka.jpg/800px-Galle_Fort_Lighthouse_Sri_Lanka.jpg',
+        image: '/galle-new.png',
         places: 'Colombo to the coast \u2014 the complete island',
         highlights: ['All cultural highlights', 'Hill country & tea', 'Two wildlife safaris', 'Southern beaches & Ayurveda'],
     },

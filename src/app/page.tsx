@@ -7,7 +7,7 @@ import { ArrowRightIcon } from 'lucide-react'
 import Image from 'next/image'
 
 const SIGIRIYA = '/sigiriya-new.png'
-const NINE_ARCH = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Nine_Arch_Bridge%2C_Ella.jpg/800px-Nine_Arch_Bridge%2C_Ella.jpg'
+const NINE_ARCH = '/ella-new.png'
 const YALA = '/yala.png'
 const MIRISSA = '/mirissa.png'
 
