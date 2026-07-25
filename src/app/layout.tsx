@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Montserrat } from 'next/font/google'
 import './globals.css'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
+import { FloatingWidgets } from '@/components/FloatingWidgets'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -38,6 +39,42 @@ export const metadata: Metadata = {
   },
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Ceylon Soul Travels',
+  image: 'https://ceylonsoultravels.com/logo.png',
+  '@id': 'https://ceylonsoultravels.com',
+  url: 'https://ceylonsoultravels.com',
+  telephone: '+94771234567',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '143, Seeduwa 11410',
+    addressLocality: 'Seeduwa',
+    addressRegion: 'Western Province',
+    postalCode: '11410',
+    addressCountry: 'LK'
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 7.1404,
+    longitude: 79.8827
+  },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday'
+    ],
+    opens: '09:00',
+    closes: '18:00'
+  }
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -45,12 +82,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${montserrat.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="font-sans bg-white text-ink antialiased">
         <Navbar />
         <main className="min-h-screen">
           {children}
         </main>
         <Footer />
+        <FloatingWidgets />
       </body>
     </html>
   )
