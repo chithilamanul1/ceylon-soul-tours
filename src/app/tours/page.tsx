@@ -7,6 +7,8 @@ import { CheckIcon, ClockIcon, MapIcon, ArrowRightIcon } from 'lucide-react'
 import { PageHeader } from '@/components/PageHeader'
 import Image from 'next/image'
 
+import { IMAGE_SIGIRIYA, IMAGE_ELLA, IMAGE_YALA, IMAGE_GALLE } from '@/data/destinations'
+
 const HERO = '/hero-3.png'
 
 interface Tour {
@@ -22,7 +24,7 @@ const tours: Tour[] = [
     {
         name: 'Cultural Triangle Explorer',
         days: 6,
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Beauty_of_Sigiriya_by_Bimalka_Workz.jpg/800px-Beauty_of_Sigiriya_by_Bimalka_Workz.jpg',
+        image: IMAGE_SIGIRIYA,
         places: 'Kandy · Sigiriya · Dambulla · Polonnaruwa',
         highlights: ['Sigiriya Rock climb', 'Cave temples of Dambulla', 'Sacred Tooth Temple', 'Village cooking class'],
         featured: true,
@@ -30,21 +32,21 @@ const tours: Tour[] = [
     {
         name: 'Hill Country Rail Journey',
         days: 5,
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Nine_Arch_Bridge%2C_Ella.jpg/800px-Nine_Arch_Bridge%2C_Ella.jpg',
+        image: IMAGE_ELLA,
         places: 'Nuwara Eliya · Ella · Nine Arch Bridge',
         highlights: ['Scenic mountain train', 'Tea estate tour', 'Little Adam\u2019s Peak hike', 'Waterfall picnic'],
     },
     {
         name: 'Wild South Safari & Beach',
         days: 7,
-        image: '/yala.png',
+        image: IMAGE_YALA,
         places: 'Yala · Mirissa · Galle Fort',
         highlights: ['Leopard safari in Yala', 'Whale watching cruise', 'Galle Fort at sunset', 'Beach relaxation'],
     },
     {
         name: 'Grand Sri Lanka Odyssey',
         days: 12,
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Galle_Fort_Lighthouse_Sri_Lanka.jpg/800px-Galle_Fort_Lighthouse_Sri_Lanka.jpg',
+        image: IMAGE_GALLE,
         places: 'Colombo to the coast \u2014 the complete island',
         highlights: ['All cultural highlights', 'Hill country & tea', 'Two wildlife safaris', 'Southern beaches & Ayurveda'],
     },

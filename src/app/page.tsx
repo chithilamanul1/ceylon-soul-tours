@@ -6,10 +6,12 @@ import { motion } from 'framer-motion'
 import { ArrowRightIcon } from 'lucide-react'
 import Image from 'next/image'
 
-const SIGIRIYA = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7BWZRlXtSmaMC3ts8SEDvf9d7cUs4QrWULPkjpIX7OR4yh834ubvSKk7E&s=10'
-const NINE_ARCH = 'https://www.orienthotelsl.com/wp-content/uploads/2023/01/Nine-Arch-Bridge-Ella-1920x800-1.webp'
-const YALA = 'https://media.istockphoto.com/id/1489566726/photo/leopard-in-sri-lanka.jpg?s=612x612&w=0&k=20&c=kIHqKhwO_JCq94l7yg8zkZuY-v-BbiaaRxr-giy97w4='
-const MIRISSA = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRETCRdy4uZepXl6p5vQMpBj-C1vQRrYfKhNrnJFDqJR7WG1fTI4rIeJ7M&s=10'
+import { IMAGE_SIGIRIYA, IMAGE_ELLA, IMAGE_YALA, IMAGE_MIRISSA } from '@/data/destinations'
+
+const SIGIRIYA = IMAGE_SIGIRIYA
+const NINE_ARCH = IMAGE_ELLA
+const YALA = IMAGE_YALA
+const MIRISSA = IMAGE_MIRISSA
 
 export default function Home() {
   return (
@@ -38,7 +40,7 @@ export default function Home() {
           >
             <h1 className="font-display text-5xl md:text-8xl lg:text-[120px] font-medium text-white leading-[0.9] tracking-tight">
               Tours Of Soul.
-              In Sri Lanka.<br />
+              In .<br />
               <span className="italic font-light">Sri Lanka.</span>
             </h1>
           </motion.div>

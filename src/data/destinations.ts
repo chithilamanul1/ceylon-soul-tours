@@ -1,3 +1,10 @@
+export const IMAGE_SIGIRIYA = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7BWZRlXtSmaMC3ts8SEDvf9d7cUs4QrWULPkjpIX7OR4yh834ubvSKk7E&s=10'
+export const IMAGE_ELLA = 'https://www.orienthotelsl.com/wp-content/uploads/2023/01/Nine-Arch-Bridge-Ella-1920x800-1.webp'
+export const IMAGE_YALA = 'https://media.istockphoto.com/id/1489566726/photo/leopard-in-sri-lanka.jpg?s=612x612&w=0&k=20&c=kIHqKhwO_JCq94l7yg8zkZuY-v-BbiaaRxr-giy97w4='
+export const IMAGE_GALLE = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Galle_Fort_Lighthouse_Sri_Lanka.jpg/800px-Galle_Fort_Lighthouse_Sri_Lanka.jpg'
+export const IMAGE_MIRISSA = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRETCRdy4uZepXl6p5vQMpBj-C1vQRrYfKhNrnJFDqJR7WG1fTI4rIeJ7M&s=10'
+export const IMAGE_KANDY = 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Temple_of_the_Tooth_Relic_Kandy.jpg/800px-Temple_of_the_Tooth_Relic_Kandy.jpg'
+
 export interface Destination {
     name: string
     slug: string
@@ -12,7 +19,7 @@ export const destinations: Destination[] = [
         name: 'Sigiriya',
         slug: 'sigiriya-rock-fortress',
         region: 'Cultural Triangle',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Beauty_of_Sigiriya_by_Bimalka_Workz.jpg/800px-Beauty_of_Sigiriya_by_Bimalka_Workz.jpg',
+        image: IMAGE_SIGIRIYA,
         blurb: 'Climb the famous ancient rock palace in the jungle.',
         tags: ['History', 'Nature', 'Views'],
     },
@@ -20,7 +27,7 @@ export const destinations: Destination[] = [
         name: 'Ella',
         slug: 'ella-hill-country',
         region: 'Hill Country',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Nine_Arch_Bridge%2C_Ella.jpg/800px-Nine_Arch_Bridge%2C_Ella.jpg',
+        image: IMAGE_ELLA,
         blurb: 'A beautiful mountain village with tea gardens, waterfalls, and the Nine Arch Bridge.',
         tags: ['Mountains', 'Tea', 'Hiking'],
     },
@@ -28,7 +35,7 @@ export const destinations: Destination[] = [
         name: 'Yala National Park',
         slug: 'yala-safari',
         region: 'South Coast',
-        image: '/yala.png',
+        image: IMAGE_YALA,
         blurb: 'Go on a safari to see wild elephants and leopards.',
         tags: ['Wildlife', 'Safari', 'Nature'],
     },
@@ -36,7 +43,7 @@ export const destinations: Destination[] = [
         name: 'Galle Fort',
         slug: 'galle-dutch-fort',
         region: 'South Coast',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Galle_Fort_Lighthouse_Sri_Lanka.jpg/800px-Galle_Fort_Lighthouse_Sri_Lanka.jpg',
+        image: IMAGE_GALLE,
         blurb: 'Walk around the old Dutch fort by the sea.',
         tags: ['Heritage', 'Coastal', 'Architecture'],
     },
@@ -44,7 +51,7 @@ export const destinations: Destination[] = [
         name: 'Mirissa',
         slug: 'mirissa-beach',
         region: 'South Coast',
-        image: '/mirissa.png',
+        image: IMAGE_MIRISSA,
         blurb: 'Relax on the beach, surf, and go whale watching.',
         tags: ['Beach', 'Whales', 'Relaxation'],
     },
@@ -52,7 +59,7 @@ export const destinations: Destination[] = [
         name: 'Kandy',
         slug: 'kandy-temple-of-tooth',
         region: 'Central Province',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Temple_of_the_Tooth_Relic_Kandy.jpg/800px-Temple_of_the_Tooth_Relic_Kandy.jpg',
+        image: IMAGE_KANDY,
         blurb: 'Visit the famous Temple of the Tooth in this beautiful city.',
         tags: ['Culture', 'Heritage', 'Temple'],
     },
