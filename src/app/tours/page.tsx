@@ -22,7 +22,7 @@ const tours: Tour[] = [
     {
         name: 'Cultural Triangle Explorer',
         days: 6,
-        image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Beauty_of_Sigiriya_by_Bimalka_Workz.jpg?width=800',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Beauty_of_Sigiriya_by_Bimalka_Workz.jpg/800px-Beauty_of_Sigiriya_by_Bimalka_Workz.jpg',
         places: 'Kandy · Sigiriya · Dambulla · Polonnaruwa',
         highlights: ['Sigiriya Rock climb', 'Cave temples of Dambulla', 'Sacred Tooth Temple', 'Village cooking class'],
         featured: true,
@@ -30,22 +30,22 @@ const tours: Tour[] = [
     {
         name: 'Hill Country Rail Journey',
         days: 5,
-        image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Nine_Arch_Bridge,_Ella.jpg?width=800',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Nine_Arch_Bridge%2C_Ella.jpg/800px-Nine_Arch_Bridge%2C_Ella.jpg',
         places: 'Nuwara Eliya · Ella · Nine Arch Bridge',
-        highlights: ['Scenic mountain train', 'Tea estate tour', 'Little Adam’s Peak hike', 'Waterfall picnic'],
+        highlights: ['Scenic mountain train', 'Tea estate tour', 'Little Adam\u2019s Peak hike', 'Waterfall picnic'],
     },
     {
         name: 'Wild South Safari & Beach',
         days: 7,
-        image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Lankan_Leopard_in_Yala_National_Park.jpg?width=800',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sri_Lankan_Leopard_in_Yala_National_Park.jpg/800px-Sri_Lankan_Leopard_in_Yala_National_Park.jpg',
         places: 'Yala · Mirissa · Galle Fort',
         highlights: ['Leopard safari in Yala', 'Whale watching cruise', 'Galle Fort at sunset', 'Beach relaxation'],
     },
     {
         name: 'Grand Sri Lanka Odyssey',
         days: 12,
-        image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Galle_Fort_Lighthouse_Sri_Lanka.jpg?width=800',
-        places: 'Colombo to the coast — the complete island',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Galle_Fort_Lighthouse_Sri_Lanka.jpg/800px-Galle_Fort_Lighthouse_Sri_Lanka.jpg',
+        places: 'Colombo to the coast \u2014 the complete island',
         highlights: ['All cultural highlights', 'Hill country & tea', 'Two wildlife safaris', 'Southern beaches & Ayurveda'],
     },
 ]
@@ -82,11 +82,11 @@ export default function Tours() {
                             <div className="relative h-56 md:h-64">
                                 <Image src={t.image} alt={t.name} fill className="object-cover" />
                                 {t.featured && (
-                                    <span className="absolute top-4 left-4 rounded-full bg-primary text-white text-[10px] md:text-xs font-semibold px-3 py-1 md:px-4 md:py-1.5 shadow-sm">
+                                    <span className="absolute top-4 left-4 rounded-full bg-primary text-white text-[10px] md:text-xs font-semibold px-3 py-1 shadow-sm">
                                         Most Popular
                                     </span>
                                 )}
-                                <div className="absolute bottom-4 right-4 flex items-center gap-1.5 rounded-full bg-white/90 backdrop-blur text-ink text-[10px] md:text-xs font-semibold px-3 py-1.5 md:px-4 md:py-2 shadow-sm">
+                                <div className="absolute bottom-4 right-4 flex items-center gap-1.5 rounded-full bg-white/90 backdrop-blur text-ink text-[10px] md:text-xs font-semibold px-3 py-1.5 shadow-sm">
                                     <ClockIcon className="h-3 w-3 md:h-4 md:w-4 text-primary" /> {t.days} days
                                 </div>
                             </div>

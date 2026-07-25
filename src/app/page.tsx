@@ -6,6 +6,11 @@ import { motion } from 'framer-motion'
 import { ArrowRightIcon } from 'lucide-react'
 import Image from 'next/image'
 
+const SIGIRIYA = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Beauty_of_Sigiriya_by_Bimalka_Workz.jpg/800px-Beauty_of_Sigiriya_by_Bimalka_Workz.jpg'
+const NINE_ARCH = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Nine_Arch_Bridge%2C_Ella.jpg/800px-Nine_Arch_Bridge%2C_Ella.jpg'
+const YALA = 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sri_Lankan_Leopard_in_Yala_National_Park.jpg/800px-Sri_Lankan_Leopard_in_Yala_National_Park.jpg'
+const MIRISSA = 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Mirissa_Beach%2C_Sri_Lanka.jpg/800px-Mirissa_Beach%2C_Sri_Lanka.jpg'
+
 export default function Home() {
   return (
     <div className="w-full bg-[#FAFAFA] text-ink selection:bg-primary/20">
@@ -43,14 +48,8 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.5 }}
             className="mt-12 md:mt-20"
           >
-            <Link
-              href="/tours"
-              className="group inline-flex items-center gap-4 text-white text-sm md:text-base tracking-widest uppercase hover:text-primary transition-colors"
-            >
-              <span className="relative overflow-hidden">
-                <span className="inline-block transition-transform duration-500 group-hover:-translate-y-full">Discover the Island</span>
-                <span className="absolute left-0 top-0 inline-block translate-y-full transition-transform duration-500 group-hover:translate-y-0 text-primary">Discover the Island</span>
-              </span>
+            <Link href="/tours" className="group inline-flex items-center gap-4 text-white text-sm md:text-base tracking-widest uppercase hover:text-primary transition-colors">
+              Discover the Island
               <ArrowRightIcon className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-2" />
             </Link>
           </motion.div>
@@ -90,8 +89,8 @@ export default function Home() {
             className="md:col-span-7 relative h-[60vh] md:h-[80vh] w-full rounded-2xl overflow-hidden"
           >
             <Image
-              src="https://commons.wikimedia.org/wiki/Special:FilePath/Nine_Arch_Bridge,_Ella.jpg?width=800"
-              alt="Sri Lankan Coast"
+              src={NINE_ARCH}
+              alt="Nine Arch Bridge Ella"
               fill
               className="object-cover hover:scale-105 transition-transform duration-1000"
             />
@@ -113,7 +112,7 @@ export default function Home() {
           </div>
 
           <div className="space-y-24 md:space-y-40">
-            {/* Experience 1 */}
+            {/* Experience 1 — The Wild */}
             <div className="grid md:grid-cols-12 gap-8 md:gap-16 items-center">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
@@ -122,7 +121,7 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 className="md:col-span-7 relative h-[50vh] md:h-[70vh] w-full rounded-2xl overflow-hidden"
               >
-                <Image src="https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Lankan_Leopard_in_Yala_National_Park.jpg?width=800" alt="Wildlife" fill className="object-cover" />
+                <Image src={YALA} alt="Wildlife Safari Yala" fill className="object-cover" />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
@@ -142,7 +141,7 @@ export default function Home() {
               </motion.div>
             </div>
 
-            {/* Experience 2 */}
+            {/* Experience 2 — The Heritage */}
             <div className="grid md:grid-cols-12 gap-8 md:gap-16 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -154,7 +153,7 @@ export default function Home() {
                 <span className="text-xs font-medium tracking-widest uppercase text-primary mb-4 block">02 — The Heritage</span>
                 <h3 className="font-display text-3xl md:text-5xl font-medium mb-6">Cultural Tours</h3>
                 <p className="text-ink/70 text-lg leading-relaxed mb-8">
-                  Visit ancient temples and famous historical places to learn about Sri Lanka’s rich culture. Explore cities like Kandy and Galle with our friendly guides.
+                  Visit ancient temples and famous historical places to learn about Sri Lanka's rich culture. Explore Sigiriya, Kandy, and Galle with our friendly guides.
                 </p>
                 <Link href="/destinations" className="inline-flex items-center gap-2 text-sm font-medium tracking-widest uppercase hover:text-primary transition-colors">
                   Discover Heritage <ArrowRightIcon className="h-4 w-4" />
@@ -167,11 +166,11 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 className="md:col-span-7 relative h-[50vh] md:h-[70vh] w-full rounded-2xl overflow-hidden order-1 md:order-2"
               >
-                <Image src="https://commons.wikimedia.org/wiki/Special:FilePath/Beauty_of_Sigiriya_by_Bimalka_Workz.jpg?width=800" alt="Heritage" fill className="object-cover" />
+                <Image src={SIGIRIYA} alt="Sigiriya Rock Fortress" fill className="object-cover" />
               </motion.div>
             </div>
 
-            {/* Experience 3 */}
+            {/* Experience 3 — The Coast */}
             <div className="grid md:grid-cols-12 gap-8 md:gap-16 items-center">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
@@ -180,7 +179,7 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 className="md:col-span-7 relative h-[50vh] md:h-[70vh] w-full rounded-2xl overflow-hidden"
               >
-                <Image src="https://commons.wikimedia.org/wiki/Special:FilePath/Coconut_Tree_Hill_Mirissa.jpg?width=800" alt="Coast" fill className="object-cover" />
+                <Image src={MIRISSA} alt="Mirissa Beach" fill className="object-cover" />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
@@ -192,7 +191,7 @@ export default function Home() {
                 <span className="text-xs font-medium tracking-widest uppercase text-primary mb-4 block">03 — The Coast</span>
                 <h3 className="font-display text-3xl md:text-5xl font-medium mb-6">Beach Holidays</h3>
                 <p className="text-ink/70 text-lg leading-relaxed mb-8">
-                  Relax on beautiful sunny beaches like Mirissa and Bentota with our special beach packages. Surf the waves or embark on whale watching expeditions.
+                  Relax on beautiful sunny beaches like Mirissa and Bentota. Surf the waves or embark on whale watching expeditions.
                 </p>
                 <Link href="/tours" className="inline-flex items-center gap-2 text-sm font-medium tracking-widest uppercase hover:text-primary transition-colors">
                   View Beaches <ArrowRightIcon className="h-4 w-4" />
