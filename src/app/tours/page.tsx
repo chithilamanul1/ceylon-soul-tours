@@ -22,7 +22,7 @@ const tours: Tour[] = [
     {
         name: 'Cultural Triangle Explorer',
         days: 6,
-        image: '/sigiriya.jpg',
+        image: '/sigiriya.png',
         places: 'Kandy · Sigiriya · Dambulla · Polonnaruwa',
         highlights: ['Sigiriya Rock climb', 'Cave temples of Dambulla', 'Sacred Tooth Temple', 'Village cooking class'],
         featured: true,
@@ -30,21 +30,21 @@ const tours: Tour[] = [
     {
         name: 'Hill Country Rail Journey',
         days: 5,
-        image: '/ella.jpg',
+        image: '/ella.png',
         places: 'Nuwara Eliya · Ella · Nine Arch Bridge',
         highlights: ['Scenic mountain train', 'Tea estate tour', 'Little Adam’s Peak hike', 'Waterfall picnic'],
     },
     {
         name: 'Wild South Safari & Beach',
         days: 7,
-        image: '/yala.jpg',
+        image: '/yala.png',
         places: 'Yala · Mirissa · Galle Fort',
         highlights: ['Leopard safari in Yala', 'Whale watching cruise', 'Galle Fort at sunset', 'Beach relaxation'],
     },
     {
         name: 'Grand Sri Lanka Odyssey',
         days: 12,
-        image: '/galle.jpg',
+        image: '/galle.png',
         places: 'Colombo to the coast — the complete island',
         highlights: ['All cultural highlights', 'Hill country & tea', 'Two wildlife safaris', 'Southern beaches & Ayurveda'],
     },
