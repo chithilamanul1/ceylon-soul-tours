@@ -96,9 +96,14 @@ export function Footer() {
                 </div>
 
                 <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <p className="text-white/40 text-xs">
-                        © {new Date().getFullYear()} Ceylon Soul Travels. All rights reserved.
-                    </p>
+                    <div className="flex flex-col gap-1.5 text-center md:text-left">
+                        <p className="text-white/40 text-xs">
+                            © {new Date().getFullYear()} Ceylon Soul Travels. All rights reserved.
+                        </p>
+                        <p className="text-white/30 text-[10px]">
+                            Made with love by <a href="https://seranex.lk" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Seranex.lk</a> & Chithila Manul. Maintenance by Seranex.
+                        </p>
+                    </div>
                     <div className="flex items-center gap-6 text-xs text-white/40">
                         <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
                         <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>

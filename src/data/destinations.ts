@@ -1,9 +1,9 @@
 export const IMAGE_SIGIRIYA = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7BWZRlXtSmaMC3ts8SEDvf9d7cUs4QrWULPkjpIX7OR4yh834ubvSKk7E&s=10'
 export const IMAGE_ELLA = 'https://www.orienthotelsl.com/wp-content/uploads/2023/01/Nine-Arch-Bridge-Ella-1920x800-1.webp'
 export const IMAGE_YALA = 'https://media.istockphoto.com/id/1489566726/photo/leopard-in-sri-lanka.jpg?s=612x612&w=0&k=20&c=kIHqKhwO_JCq94l7yg8zkZuY-v-BbiaaRxr-giy97w4='
-export const IMAGE_GALLE = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Galle_Fort_Lighthouse_Sri_Lanka.jpg/800px-Galle_Fort_Lighthouse_Sri_Lanka.jpg'
+export const IMAGE_GALLE = 'https://do6raq9h04ex.cloudfront.net/sites/8/2021/07/galle-fort-1050x700-1.jpg'
 export const IMAGE_MIRISSA = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRETCRdy4uZepXl6p5vQMpBj-C1vQRrYfKhNrnJFDqJR7WG1fTI4rIeJ7M&s=10'
-export const IMAGE_KANDY = 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Temple_of_the_Tooth_Relic_Kandy.jpg/800px-Temple_of_the_Tooth_Relic_Kandy.jpg'
+export const IMAGE_KANDY = 'https://lakshmisharath.com/wp-content/uploads/2022/09/Kandy-toothrelictemple-dawn.jpg'
 
 export interface Destination {
     name: string
