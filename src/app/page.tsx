@@ -11,12 +11,11 @@ import {
   ThumbsUpIcon,
   SettingsIcon,
   SmileIcon,
-  StarIcon
+  StarIcon,
+  CheckIcon
 } from 'lucide-react'
 import { destinations } from '@/data/destinations'
 import { DestinationCard } from '@/components/DestinationCard'
-
-const HERO_VIDEO = 'https://assets.mixkit.co/videos/preview/mixkit-waterfall-in-forest-2213-large.mp4'
 
 const stats = [
   { value: '65,610 km²', label: 'Area' },
@@ -28,32 +27,32 @@ const whyChooseUs = [
   {
     icon: ShieldCheckIcon,
     title: '15+ YEARS OF EXPERIENCE',
-    text: 'Delivering memorable journeys with trusted expertise built over a decade in Sri Lankan tourism.',
+    text: 'We have planned great trips for over 10 years.',
   },
   {
     icon: AwardIcon,
     title: 'LICENSED & RECOGNISED',
-    text: 'Officially licensed by SLTDA (Sri Lanka Tourism Development Authority) for your peace of mind.',
+    text: 'We are a safe and trusted company, approved by the government.',
   },
   {
     icon: SettingsIcon,
     title: 'CUSTOMIZED TOURS',
-    text: 'Tailor-made itineraries crafted to suit your interests, travel style, and budget.',
+    text: 'We plan your trip exactly how you want it, for your budget.',
   },
   {
     icon: SmileIcon,
     title: 'ENGLISH-SPEAKING GUIDES',
-    text: 'Friendly chauffeurs who make your journey smooth, safe, and easy to follow.',
+    text: 'Our friendly drivers speak English and keep you safe.',
   },
   {
     icon: ClockIcon,
     title: '24/7 ASSISTANCE',
-    text: 'Round-the-clock support to keep your trip worry-free, wherever you are.',
+    text: 'We are always here to help you, day or night.',
   },
   {
     icon: ThumbsUpIcon,
     title: 'PROFESSIONAL YET PERSONAL',
-    text: 'A perfect blend of professionalism and personalized service to make you feel at home.',
+    text: 'We are professional but treat you like family.',
   },
 ]
 
@@ -82,7 +81,7 @@ export default function Home() {
       <section className="relative min-h-[100svh] flex items-center bg-white overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent z-10" />
-          <div className="absolute inset-0 bg-black/10 z-10 md:hidden" /> {/* Extra overlay for mobile readability */}
+          <div className="absolute inset-0 bg-black/10 z-10 md:hidden" />
           <video
             autoPlay
             loop
@@ -104,13 +103,13 @@ export default function Home() {
           >
             <h1 className="mt-6 font-display text-4xl md:text-7xl font-bold text-ink leading-[1.1]">
               Magical Memories, <br />
-              <span className="font-normal italic">Bespoke experiences</span>
+              <span className="font-normal italic">Custom Tours</span>
             </h1>
             <p className="mt-4 md:mt-6 text-base md:text-lg text-ink/90 md:text-ink/80 leading-relaxed font-medium md:font-normal">
-              Embark on a journey with Ceylon Soul Travels, where every moment is carefully crafted to leave a lasting mark on your heart. We believe travel is more than just visiting places; it is about creating magical memories that stay with you long after you go home.
+              Travel with Ceylon Soul Travels for a trip you will never forget. We believe travel is about making magical memories, not just visiting places.
             </p>
             <p className="mt-3 md:mt-4 text-base md:text-lg text-ink/90 md:text-ink/80 leading-relaxed font-medium md:font-normal">
-              Our goal is to go beyond the ordinary. By understanding what you love, we make sure your time in Sri Lanka is a personal story waiting to be told.
+              We plan special trips just for you. Tell us what you love, and we will make your Sri Lanka holiday perfect.
             </p>
             <div className="mt-8 md:mt-10">
               <Link
@@ -141,10 +140,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-5">
           <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
             <h2 className="font-display text-3xl md:text-5xl font-bold text-ink mb-3 md:mb-4">
-              Curated Itineraries
+              Our Best Tours
             </h2>
             <p className="text-ink/70 text-base md:text-lg">
-              Explore the exotic depths of Sri Lanka in all its beauty, grandeur, mystery and luxury. We know that a holiday should revive your entire self; body, mind and spirit alike.
+              See the beautiful beaches, wild animals, and ancient temples of Sri Lanka. A good holiday should make you feel happy and relaxed.
             </p>
           </div>
           <div className="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -163,8 +162,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Our Services */}
+      <section className="bg-white py-16 md:py-24 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-5">
+          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-ink mb-3 md:mb-4">
+              Our Services
+            </h2>
+            <p className="text-ink/70 text-base md:text-lg">
+              At Ceylon Soul Travels, we are dedicated to creating unforgettable travel experiences in the beautiful island of Sri Lanka. Whether you are seeking adventure, relaxation, cultural exploration, or nature encounters, we offer a wide range of travel and tourism services tailored to meet your needs and exceed your expectations.
+            </p>
+          </div>
+          <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { title: 'Custom Tour Packages', desc: 'We design personalized tour itineraries based on your interests, budget, and travel duration. From romantic getaways to family holidays or solo adventures, our packages are fully customizable.' },
+              { title: 'Airport Transfers', desc: 'Enjoy hassle-free airport pick-up and drop-off services with our punctual and comfortable transportation options. We ensure a smooth start and end to your journey.' },
+              { title: 'Hotel & Accommodation Booking', desc: 'We partner with a wide range of hotels, villas, resorts, and guesthouses across Sri Lanka to offer you the best rates and comfortable stays that suit your preferences.' },
+              { title: 'City Tours & Day Trips', desc: 'Discover the charm of Sri Lankan cities with our guided tours. Explore cultural landmarks, bustling markets, and historical sites in cities like Colombo, Kandy, Galle, and more.' },
+              { title: 'Wildlife & Nature Tours', desc: 'Experience the wild beauty of Sri Lanka with our safari tours to national parks such as Yala, Udawalawe, and Minneriya. Ideal for nature lovers and wildlife photographers.' },
+              { title: 'Adventure & Sports Tours', desc: 'From hiking and trekking to water sports and surfing, we organize thrilling adventure activities for adrenaline seekers.' },
+              { title: 'Cultural & Heritage Tours', desc: 'Explore Sri Lanka’s rich history and heritage through visits to ancient cities, UNESCO World Heritage Sites, and sacred temples.' },
+              { title: 'Beach Holidays', desc: 'Relax on the pristine beaches of Sri Lanka. We offer beach tour packages to places like Bentota, Mirissa, Trincomalee, and Arugam Bay.' },
+              { title: 'Transportation', desc: 'Travel comfortably with our fleet of well-maintained vehicles. We offer cars, vans, and luxury vehicles with experienced drivers for your entire journey.' },
+            ].map((service, i) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100 hover:border-primary/30 transition-colors"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <CheckIcon className="h-4 w-4" />
+                  </div>
+                  <h3 className="font-semibold text-ink text-base md:text-lg">{service.title}</h3>
+                </div>
+                <p className="text-ink/70 text-sm leading-relaxed">{service.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-5">
           <div className="text-center mb-10 md:mb-16">
             <span className="text-ink/60 text-xs md:text-sm font-medium tracking-widest uppercase">Founded in 2013</span>
@@ -188,6 +231,63 @@ export default function Home() {
                 <p className="text-ink/70 text-xs md:text-sm leading-relaxed">{item.text}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Vision & Mission */}
+      <section className="py-16 md:py-24 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-5">
+          <div className="grid gap-12 md:gap-16 lg:grid-cols-2">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-primary/5 rounded-3xl p-8 md:p-12 border border-primary/10"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <span className="text-3xl">🌍</span>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-ink">Our Vision</h2>
+              </div>
+              <p className="text-ink/80 text-base md:text-lg leading-relaxed mb-6 font-medium">
+                To be the most trusted and inspiring travel partner in Sri Lanka, delivering unforgettable holiday experiences that showcase the natural beauty, cultural richness, and warm hospitality of our island nation.
+              </p>
+              <p className="text-ink/70 text-sm md:text-base leading-relaxed">
+                At Ceylon Soul Travels, we envision becoming a leading name in the tourism industry by offering exceptional travel experiences that go beyond expectations. We aim to promote Sri Lanka as a top travel destination while ensuring sustainable and responsible tourism practices that benefit both our clients and local communities.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-gray-50 rounded-3xl p-8 md:p-12 border border-gray-100"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <span className="text-3xl">✨</span>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-ink">Our Mission</h2>
+              </div>
+              <p className="text-ink/80 text-base md:text-lg leading-relaxed mb-6 font-medium">
+                Our mission is to craft personalized, high-quality, and authentic travel experiences across Sri Lanka, focusing on customer satisfaction, cultural immersion, and exceptional service.
+              </p>
+              <p className="text-ink/70 text-sm md:text-base font-semibold mb-4">We are committed to:</p>
+              <ul className="space-y-3">
+                {[
+                  'Providing safe, reliable, and enjoyable tours tailored to the interests and preferences of every traveler.',
+                  'Showcasing the diverse attractions of Sri Lanka—from pristine beaches and lush jungles to ancient cities and vibrant traditions.',
+                  'Supporting local communities and promoting eco-friendly tourism.',
+                  'Continuously improving our services through innovation, feedback, and dedicated customer care.',
+                  'Creating lasting memories that inspire our guests to return and recommend us with confidence.'
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm md:text-base text-ink/70">
+                    <CheckIcon className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -258,9 +358,9 @@ export default function Home() {
       {/* CTA */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-5 text-center">
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-ink">Ready to find your Ceylon soul?</h2>
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-ink">Ready to visit Sri Lanka?</h2>
           <p className="mt-4 md:mt-6 text-ink/70 text-base md:text-lg max-w-2xl mx-auto">
-            Tell us your dream and we will craft a journey that fits it perfectly. We make sure your holiday is relaxing, fun, and exactly what you want.
+            Tell us what you want to do, and we will plan the perfect trip for you.
           </p>
           <Link
             href="/contact"

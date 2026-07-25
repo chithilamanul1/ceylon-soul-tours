@@ -15,8 +15,7 @@ export function FloatingWidgets() {
 
         if (selectedRating === 5) {
             // Redirect to real Google Business Profile review link
-            // Replace with actual Google Review link
-            window.open('https://g.page/r/ceylonsoultravels/review', '_blank')
+            window.open('https://share.google/do7Begh2vzlLC1Vim', '_blank')
             setShowReviewModal(false)
             setRating(0)
         } else {
@@ -42,7 +41,7 @@ export function FloatingWidgets() {
                 </button>
 
                 <a
-                    href="https://wa.me/94771234567" // Replace with actual WhatsApp number
+                    href="https://wa.me/94765996958"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="h-14 w-14 bg-[#25D366] text-white rounded-full shadow-xl flex items-center justify-center hover:scale-110 transition-transform"
@@ -92,8 +91,8 @@ export function FloatingWidgets() {
                                             >
                                                 <StarIcon
                                                     className={`h-10 w-10 transition-colors ${star <= (hoveredRating || rating)
-                                                            ? 'fill-primary text-primary'
-                                                            : 'fill-transparent text-gray-300'
+                                                        ? 'fill-primary text-primary'
+                                                        : 'fill-transparent text-gray-300'
                                                         }`}
                                                 />
                                             </button>
