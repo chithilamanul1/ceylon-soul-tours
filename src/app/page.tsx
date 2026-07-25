@@ -23,10 +23,10 @@ export default function Home() {
             loop
             muted
             playsInline
-            poster="/hero-2.png"
+            poster="/hero-1.png"
             className="absolute inset-0 w-full h-full object-cover object-center scale-105"
           >
-            <source src="/hero-video.mp4" type="video/mp4" />
+            <source src="https://cdn.pixabay.com/video/2023/10/22/186115-877653483_large.mp4" type="video/mp4" />
           </video>
         </div>
 
