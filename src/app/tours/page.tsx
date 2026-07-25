@@ -22,7 +22,7 @@ const tours: Tour[] = [
     {
         name: 'Cultural Triangle Explorer',
         days: 6,
-        image: 'https://images.unsplash.com/photo-1588598198321-17ef48c67288?q=80&w=1000&auto=format&fit=crop',
+        image: '/sigiriya.jpg',
         places: 'Kandy · Sigiriya · Dambulla · Polonnaruwa',
         highlights: ['Sigiriya Rock climb', 'Cave temples of Dambulla', 'Sacred Tooth Temple', 'Village cooking class'],
         featured: true,
@@ -30,21 +30,21 @@ const tours: Tour[] = [
     {
         name: 'Hill Country Rail Journey',
         days: 5,
-        image: 'https://images.unsplash.com/photo-1578338982352-094191024345?q=80&w=1000&auto=format&fit=crop',
+        image: '/ella.jpg',
         places: 'Nuwara Eliya · Ella · Nine Arch Bridge',
         highlights: ['Scenic mountain train', 'Tea estate tour', 'Little Adam’s Peak hike', 'Waterfall picnic'],
     },
     {
         name: 'Wild South Safari & Beach',
         days: 7,
-        image: 'https://images.unsplash.com/photo-1620218765275-5d7524941916?q=80&w=1000&auto=format&fit=crop',
+        image: '/yala.jpg',
         places: 'Yala · Mirissa · Galle Fort',
         highlights: ['Leopard safari in Yala', 'Whale watching cruise', 'Galle Fort at sunset', 'Beach relaxation'],
     },
     {
         name: 'Grand Sri Lanka Odyssey',
         days: 12,
-        image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=1000&auto=format&fit=crop',
+        image: '/galle.jpg',
         places: 'Colombo to the coast — the complete island',
         highlights: ['All cultural highlights', 'Hill country & tea', 'Two wildlife safaris', 'Southern beaches & Ayurveda'],
     },
