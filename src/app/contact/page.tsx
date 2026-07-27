@@ -83,7 +83,7 @@ function ContactContent() {
                             </button>
                         </motion.div>
                     ) : (
-                        <form action="https://formsubmit.co/info@ceylonsoultravels.lk" method="POST" className="space-y-4 md:space-y-6">
+                        <form action="https://formsubmit.co/ceylonsoultravel@gmail.com" method="POST" className="space-y-4 md:space-y-6">
                             {/* FormSubmit Configuration */}
                             <input type="hidden" name="_subject" value="New Contact Form Submission - Ceylon Soul Travels" />
                             <input type="hidden" name="_captcha" value="false" />
