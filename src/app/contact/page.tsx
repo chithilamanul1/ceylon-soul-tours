@@ -1,9 +1,10 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect, Suspense } from 'react'
 import { motion } from 'framer-motion'
 import { MapPinIcon, PhoneIcon, MailIcon, ClockIcon, SendIcon, CheckCircleIcon } from 'lucide-react'
 import { PageHeader } from '@/components/PageHeader'
+import { useSearchParams } from 'next/navigation'
 
 const HERO = '/hero-1.png'
 
@@ -14,13 +15,15 @@ const info = [
     { icon: ClockIcon, title: 'Office hours', lines: ['Mon – Sat: 9am – 6pm', 'Sunday: By appointment'] },
 ]
 
-export default function Contact() {
+function ContactContent() {
+    const searchParams = useSearchParams()
     const [sent, setSent] = useState(false)
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault()
-        setSent(true)
-    }
+    useEffect(() => {
+        if (searchParams.get('success') === 'true') {
+            setSent(true)
+        }
+    }, [searchParams])
 
     return (
         <div className="w-full bg-white">
@@ -80,7 +83,13 @@ export default function Contact() {
                             </button>
                         </motion.div>
                     ) : (
-                        <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+                        <form action="https://formsubmit.co/info@ceylonsoultravels.lk" method="POST" className="space-y-4 md:space-y-6">
+                            {/* FormSubmit Configuration */}
+                            <input type="hidden" name="_subject" value="New Contact Form Submission - Ceylon Soul Travels" />
+                            <input type="hidden" name="_captcha" value="false" />
+                            <input type="hidden" name="_next" value="https://ceylonsoultravels.com/contact?success=true" />
+                            <input type="hidden" name="_template" value="table" />
+
                             <h3 className="font-display text-2xl md:text-3xl font-bold text-ink mb-5 md:mb-8">Send us a message</h3>
                             <div className="grid gap-4 md:gap-6 sm:grid-cols-2">
                                 <Field label="Full name" name="name" placeholder="Your name" />
@@ -90,17 +99,18 @@ export default function Contact() {
                                 <Field label="Phone" name="phone" placeholder="+94 ..." required={false} />
                                 <div>
                                     <label className="block text-sm font-medium text-ink/80 mb-2">Interested in</label>
-                                    <select className="w-full rounded-xl bg-gray-50 border border-gray-200 text-ink px-4 py-3.5 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-shadow">
-                                        <option>Cultural Triangle</option>
-                                        <option>Hill Country Rail</option>
-                                        <option>Wildlife Safari</option>
-                                        <option>Custom itinerary</option>
+                                    <select name="interest" className="w-full rounded-xl bg-gray-50 border border-gray-200 text-ink px-4 py-3.5 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-shadow">
+                                        <option value="Cultural Triangle">Cultural Triangle</option>
+                                        <option value="Hill Country Rail">Hill Country Rail</option>
+                                        <option value="Wildlife Safari">Wildlife Safari</option>
+                                        <option value="Custom itinerary">Custom itinerary</option>
                                     </select>
                                 </div>
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-ink/80 mb-2">Your message</label>
                                 <textarea
+                                    name="message"
                                     required
                                     rows={4}
                                     placeholder="Tell us about your dream trip..."
@@ -118,6 +128,14 @@ export default function Contact() {
                 </div>
             </section>
         </div>
+    )
+}
+
+export default function Contact() {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-white" />}>
+            <ContactContent />
+        </Suspense>
     )
 }
 
