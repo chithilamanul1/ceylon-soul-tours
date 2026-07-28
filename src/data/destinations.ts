@@ -4,6 +4,8 @@ export const IMAGE_YALA = 'https://media.istockphoto.com/id/1489566726/photo/leo
 export const IMAGE_GALLE = 'https://do6raq9h04ex.cloudfront.net/sites/8/2021/07/galle-fort-1050x700-1.jpg'
 export const IMAGE_MIRISSA = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRETCRdy4uZepXl6p5vQMpBj-C1vQRrYfKhNrnJFDqJR7WG1fTI4rIeJ7M&s=10'
 export const IMAGE_KANDY = 'https://lakshmisharath.com/wp-content/uploads/2022/09/Kandy-toothrelictemple-dawn.jpg'
+export const IMAGE_ARUGAM_BAY = 'https://images.unsplash.com/photo-1574227492706-f65b24c3688a?q=80&w=1000&auto=format&fit=crop'
+export const IMAGE_UDAWALAWE = 'https://images.unsplash.com/photo-1541689221361-5a5e07c24b25?q=80&w=1000&auto=format&fit=crop'
 
 export interface Destination {
     name: string
@@ -62,5 +64,21 @@ export const destinations: Destination[] = [
         image: IMAGE_KANDY,
         blurb: 'Visit the famous Temple of the Tooth in this beautiful city.',
         tags: ['Culture', 'Heritage', 'Temple'],
+    },
+    {
+        name: 'Arugam Bay',
+        slug: 'arugam-bay-surfing',
+        region: 'East Coast',
+        image: IMAGE_ARUGAM_BAY,
+        blurb: 'Catch the best waves in Sri Lanka at this world-famous surfing destination.',
+        tags: ['Beach', 'Surfing', 'Relaxation'],
+    },
+    {
+        name: 'Udawalawe Safari',
+        slug: 'udawalawe-national-park',
+        region: 'Sabaragamuwa Province',
+        image: IMAGE_UDAWALAWE,
+        blurb: 'Experience incredible wildlife sightings, especially large herds of elephants.',
+        tags: ['Wildlife', 'Safari', 'Nature'],
     },
 ]
