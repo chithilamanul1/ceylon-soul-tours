@@ -25,6 +25,45 @@ function ContactContent() {
         }
     }, [searchParams])
 
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        const formData = new FormData(e.currentTarget)
+        const name = formData.get('name')
+        const email = formData.get('email')
+        const phone = formData.get('phone')
+        const interest = formData.get('interest')
+        const message = formData.get('message')
+
+        const text = `*New Inquiry from Ceylon Soul Travels*\n\n*Name:* ${name}\n*Email:* ${email}\n*Phone:* ${phone}\n*Interested in:* ${interest}\n*Message:* ${message}`
+        const whatsappUrl = `https://wa.me/94765996958?text=${encodeURIComponent(text)}`
+
+        // Submit to FormSubmit in the background
+        try {
+            await fetch('https://formsubmit.co/ajax/ceylonsoultravel@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    phone,
+                    interest,
+                    message,
+                    _subject: 'New Contact Form Submission - Ceylon Soul Travels',
+                    _template: 'table'
+                })
+            })
+        } catch (error) {
+            console.error(error)
+        }
+
+        // Open WhatsApp
+        window.open(whatsappUrl, '_blank')
+        setSent(true)
+    }
+
     return (
         <div className="w-full bg-white">
             <PageHeader
@@ -83,12 +122,7 @@ function ContactContent() {
                             </button>
                         </motion.div>
                     ) : (
-                        <form action="https://formsubmit.co/ceylonsoultravel@gmail.com" method="POST" className="space-y-4 md:space-y-6">
-                            {/* FormSubmit Configuration */}
-                            <input type="hidden" name="_subject" value="New Contact Form Submission - Ceylon Soul Travels" />
-                            <input type="hidden" name="_captcha" value="false" />
-                            <input type="hidden" name="_next" value="https://ceylonsoultravels.com/contact?success=true" />
-                            <input type="hidden" name="_template" value="table" />
+                        <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
 
                             <h3 className="font-display text-2xl md:text-3xl font-bold text-ink mb-5 md:mb-8">Send us a message</h3>
                             <div className="grid gap-4 md:gap-6 sm:grid-cols-2">
