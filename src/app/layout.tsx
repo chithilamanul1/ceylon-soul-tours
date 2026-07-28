@@ -26,7 +26,7 @@ const greatVibes = Great_Vibes({
 export const metadata: Metadata = {
   title: 'Ceylon Soul Travels | Sri Lanka Tours & Holidays',
   description: 'Experience the magic of Sri Lanka with Ceylon Soul Travels. We offer bespoke tour packages, wildlife safaris, beach holidays, and cultural tours tailored just for you.',
-  keywords: 'travels and tours sri lanka, sri lanka tours, sri lanka tour package, sri lanka holiday packages, sri lanka trip, sri lanka travel agency, best sri lanka tour package, sri lanka vacation packages, sri lanka family holiday packages, luxury sri lanka tours, sri lanka beach holiday, sri lanka private tour, sri lanka tour itinerary, sri lanka guided tours, sri lanka wildlife tour packages, sri lanka round trip, sri lanka day tours, sri lanka tour operators, sri lanka holiday deals, sri lanka travel itinerary',
+  keywords: 'Ceylon Soul Travels, Ceylon Soul, Ceylon Soul Tours, Ceylon Soul Travels Sri Lanka, travels and tours sri lanka, sri lanka tours, sri lanka tour package, sri lanka holiday packages, sri lanka trip, sri lanka travel agency, best sri lanka tour package, sri lanka vacation packages, sri lanka family holiday packages, luxury sri lanka tours, sri lanka beach holiday, sri lanka private tour, sri lanka tour itinerary, sri lanka guided tours, sri lanka wildlife tour packages, sri lanka round trip, sri lanka day tours, sri lanka tour operators, sri lanka holiday deals, sri lanka travel itinerary',
   openGraph: {
     title: 'Ceylon Soul Travels | Sri Lanka Tours & Holidays',
     description: 'Experience the magic of Sri Lanka with Ceylon Soul Travels. We offer bespoke tour packages, wildlife safaris, beach holidays, and cultural tours tailored just for you.',

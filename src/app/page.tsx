@@ -39,6 +39,7 @@ export default function Home() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
             <h1 className="font-display text-5xl md:text-8xl lg:text-[120px] font-medium text-white leading-[0.9] tracking-tight">
+              <span className="sr-only">Ceylon Soul Travels - </span>
               Tours Of Soul.
               In .<br />
               <span className="italic font-light">Sri Lanka.</span>
